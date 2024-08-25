@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Notes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            color: #333;
+        }
+
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+
+        code {
+            background-color: #eee;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>JavaScript Notes</h1>
+
+    <h2>1. Variables and Data Types</h2>
+
+    <h3>Definition:</h3>
+    <p>JavaScript is dynamically typed. Variables can be declared using <code>var</code>, <code>let</code>, or
+        <code>const</code>. Common data types include <code>Number</code>, <code>String</code>, <code>Boolean</code>,
+        <code>Object</code>, <code>Array</code>, <code>undefined</code>, <code>null</code>.</p>
+
+    <h3>Code Snippet:</h3>
+    <pre>
+// Variable declarations
+var age = 30;
+let salary = 5000.50;
+const name = "John Doe";
+
+// Data types
+let isEmployed = true;  // Boolean
+let hobbies = ["Reading", "Traveling"];  // Array
+let person = { name: "Alice", age: 25 };  // Object
+let unknown = undefined;  // Undefined
+let nothing = null;  // Null
+    </pre>
+
+    <h2>2. Functions</h2>
+
+    <h3>Definition:</h3>
+    <p>Functions can be declared using the <code>function</code> keyword, as function expressions, or as arrow
+        functions.</p>
+
+    <h3>Code Snippet:</h3>
+    <pre>
+// Function declaration
+function greet(name) {
+    return "Hello, " + name;
+}
+
+// Function expression
+const greet = function(name) {
+    return "Hello, " + name;
+};
+
+// Arrow function
+const greet = (name) => "Hello, " + name;
+
+console.log(greet("Alice"));  // Output: Hello, Alice
+    </pre>
+
+    <h2>3. Objects and Prototypes</h2>
+
+    <h3>Definition:</h3>
+    <p>Objects in JavaScript are key-value pairs. Prototypal inheritance allows objects to inherit properties and
+        methods from other objects.</p>
+
+    <h3>Code Snippet:</h3>
+    <pre>
+// Creating an object
+let person = {
+    name: "Alice",
+    age: 25,
+    greet: function() {
+        console.log("Hello, " + this.name);
+    }
+};
+
+// Accessing object properties
+console.log(person.name);  // Output: Alice
+person.greet();  // Output: Hello, Alice
+
+// Prototypal inheritance
+let student = Object.create(person);
+student.grade = "A";
+console.log(student.name);  // Output: Alice (inherited from person)
+console.log(student.grade);  // Output: A
+    </pre>
+
+    <h2>4. Asynchronous JavaScript</h2>
+
+    <h3>Definition:</h3>
+    <p>JavaScript handles asynchronous operations using callbacks, promises, and <code>async/await</code>.</p>
+
+    <h3>Code Snippet:</h3>
+    <pre>
+// Using Promises
+function fetchData(url) {
+    return new Promise((resolve, reject) => {
+        fetch(url)
+            .then(response => response.json())
+            .then(data => resolve(data))
+            .catch(error => reject(error));
+    });
+}
+
+// Using async/await
+async function getData(url) {
+    try {
+        const data = await fetchData(url);
+        console.log(data);
+    } catch (error) {
+        console.error("Error:", error);
+    }
+}
+
+getData("https://api.example.com/data");
+    </pre>
+
+    <h2>5. DOM Manipulation</h2>
+
+    <h3>Definition:</h3>
+    <p>The Document Object Model (DOM) represents the structure of a webpage. JavaScript can interact with the DOM to
+        change content, styles, and handle events.</p>
+
+    <h3>Code Snippet:</h3>
+    <pre>
+// Selecting an element
+const title = document.getElementById("title");
+
+// Changing content
+title.textContent = "Welcome to JavaScript!";
+
+// Adding an event listener
+title.addEventListener("click", () => {
+    alert("Title clicked!");
+});
+
+// Creating and appending an element
+const newElement = document.createElement("p");
+newElement.textContent = "This is a new paragraph.";
+document.body.appendChild(newElement);
+    </pre>
+
+</body>
+
+</html>
