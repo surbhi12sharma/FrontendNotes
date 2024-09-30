@@ -1,0 +1,404 @@
+1. JavaScript Engines: Learn about the engines that execute JavaScript, such as V8 (used in Chrome).
+2. Value Types and Reference Types: Understand the distinction between primitive types and objects.
+3. Primitive Types: Know the fundamental data types like string, number, boolean, null, undefined.
+4. Expression vs Statement: Distinguish between expressions and statements in JavaScript code.
+5. Function Scope, Block Scope, and Lexical Scope: Grasp how scopes work in JavaScript.
+6. Message Queue and Event Loop: Understand asynchronous JavaScript through the event loop.
+7. setTimeout, setInterval, and requestAnimationFrame: Manage time-related operations effectively.
+8. == vs === vs typeof: Differentiate between loose equality, strict equality, and the typeof operator.
+9. Call Stack: Learn how the call stack manages function calls and execution flow.
+10. IIFE, Modules, and Namespaces: Organize and encapsulate code using Immediately Invoked Function Expressions and modularization.
+11. Bitwise Operators, Type Arrays, and Array Buffers: Handle binary data efficiently with low-level operations.
+12. DOM and Layout Trees: Understand the Document Object Model for web development.
+13. Factory Functions and Classes: Explore different approaches for creating objects.
+14. this, call, apply, and bind: Master context management and the 'this' keyword.
+15. new, Constructor, instanceof, and Instances: Grasp object instantiation and constructor functions.
+16. Prototypal Nature : Utilize prototype-based inheritance for code efficiency.
+17. Object.create and Object.assign: Learn to create and manipulate objects effectively.
+18. map, reduce, filter: Master array methods for functional programming.
+19. Pure Functions, Side Effects, State Mutation, and Event Propagation: Write clean and maintainable code.
+20. Closures: Manage variable scope and create modular code.
+21. High Order Functions: Use higher-order functions for concise and expressive code.
+22. Recursion: Solve problems efficiently with recursive functions.
+23. Collections and Generators: Understand data structures and generators for data manipulation.
+24. Asynchronous Operations: Handle asynchronous operations with callbacks, promise-based patterns and async/await .
+25. Partial Applications, Currying, Compose, and Pipe: Explore functional programming concepts for code modularity.
+
+𝟭. 𝗩𝗮𝗿𝗶𝗮𝗯𝗹𝗲𝘀 𝗮𝗻𝗱 𝗗𝗮𝘁𝗮 𝗧𝘆𝗽𝗲𝘀:
+ -> Declaration (`var`, `let`, `const`)
+ -> Primitive data types (strings, numbers, booleans, null, undefined)
+ -> Complex data types (arrays, objects, functions)
+ -> Type coercion and conversion
+
+𝟮. 𝗢𝗽𝗲𝗿𝗮𝘁𝗼𝗿𝘀 𝗮𝗻𝗱 𝗘𝘅𝗽𝗿𝗲𝘀𝘀𝗶𝗼𝗻𝘀:
+ -> Arithmetic operators (+, -, *, /, %)
+ -> Assignment operators (=, +=, -=, *=, /=, %=)
+ -> Comparison operators (==, ===, !=, !==, <, >, <=, >=)
+ -> Logical operators (&&, || , !)
+ -> Ternary operator (conditional operator)
+
+𝟯. 𝗖𝗼𝗻𝘁𝗿𝗼𝗹 𝗙𝗹𝗼𝘄:
+ -> Conditional statements (`if`, `else if`, `else`)
+ -> Switch statement
+ -> Loops (`for`, `while`, `do-while`)
+ -> Break and continue statements
+
+𝟰. 𝗙𝘂𝗻𝗰𝘁𝗶𝗼𝗻𝘀:
+ -> Function declaration and expression
+ -> Arrow functions
+ -> Parameters and arguments
+ -> Return statement
+ -> Scope (global scope, function scope, block scope)
+ -> Closures
+ -> Callback functions
+
+𝟱. 𝗔𝗿𝗿𝗮𝘆𝘀 𝗮𝗻𝗱 𝗢𝗯𝗷𝗲𝗰𝘁𝘀:
+ -> Creation and initialization
+ -> Accessing and modifying elements
+ -> Array methods (push, pop, shift, unshift, splice, slice, concat, etc.)
+ -> Object properties and methods
+ -> JSON (JavaScript Object Notation)
+
+𝟲. 𝗖𝗹𝗮𝘀𝘀𝗲𝘀 𝗮𝗻𝗱 𝗣𝗿𝗼𝘁𝗼𝘁𝘆𝗽𝗲𝘀:
+ -> Class syntax (constructor, methods, static methods)
+ -> Inheritance
+ -> Prototypal inheritance
+ -> Object.create() and Object.setPrototypeOf()
+
+𝟳. 𝗘𝗿𝗿𝗼𝗿 𝗛𝗮𝗻𝗱𝗹𝗶𝗻𝗴:
+ -> Try...catch statement
+ -> Throwing errors
+ -> Error objects (Error, SyntaxError, TypeError, etc.)
+ -> Error handling best practices
+
+𝟴. 𝗔𝘀𝘆𝗻𝗰𝗵𝗿𝗼𝗻𝗼𝘂𝘀 𝗝𝗮𝘃𝗮𝗦𝗰𝗿𝗶𝗽𝘁:
+ -> Callbacks
+ -> Promises (creation, chaining, error handling)
+ -> Async/await syntax
+ -> Fetch API
+ -> setTimeout() and setInterval()
+
+𝟵. 𝗗𝗢𝗠 𝗠𝗮𝗻𝗶𝗽𝘂𝗹𝗮𝘁𝗶𝗼𝗻:
+ -> Selecting DOM elements
+ -> Modifying element properties and attributes
+ -> Creating and removing elements
+ -> Traversing the DOM
+
+𝟭𝟬. 𝗘𝘃𝗲𝗻𝘁 𝗛𝗮𝗻𝗱𝗹𝗶𝗻𝗴:
+ -> Adding event listeners
+ -> Event objects
+ -> Event propagation (bubbling and capturing)
+ -> Event delegation
+
+𝟭𝟭. 𝗠𝗼𝗱𝘂𝗹𝗲𝘀 𝗮𝗻𝗱 𝗠𝗼𝗱𝘂𝗹𝗮𝗿𝗶𝘇𝗮𝘁𝗶𝗼𝗻:
+ -> ES6 modules (import/export)
+ -> CommonJS modules (require/module.exports)
+ -> Module bundlers (Webpack, Rollup)
+
+𝟭𝟮. 𝗕𝗿𝗼𝘄𝘀𝗲𝗿 𝗖𝗼𝗺𝗽𝗮𝘁𝗶𝗯𝗶𝗹𝗶𝘁𝘆 𝗮𝗻𝗱 𝗣𝗲𝗿𝗳𝗼𝗿𝗺𝗮𝗻𝗰𝗲:
+ -> Cross-browser compatibility
+ -> Performance optimization techniques
+ -> Minification and code splitting
+ -> Lazy loading
+
+HTML:
+• What is the purpose of the doctype declaration?
+• Explain the difference between <div> and <span>.
+
+CSS:
+• What is the box model in CSS?
+• What are pseudo elements and classes.
+• Difference between "visibility: hidden" and "display: none".
+• Explain z-index.
+
+JavaScript Basics:
+• Explain the concept of hoisting in JavaScript.
+• What is the difference between let, const, and var?
+• Difference between == and ===?
+• Explain Event loop.
+
+JavaScript Functions:
+• What is a closure in JavaScript?
+• Explain the differences between arrow functions and regular functions.
+• Explain currying.
+• Explain Promises.
+
+Responsive Design:
+• What is the importance of media queries in responsive design?
+• Describe the difference between em and rem units in CSS.
+
+CSS Flexbox:
+• What is the flexbox model, and how does it work?
+• Explain the purpose of justify-content and align-items in flexbox.
+
+CSS Grid:
+• How does CSS Grid differ from Flexbox?
+• Explain the use of the grid-template-columns property.
+
+React Basics:
+• What is JSX in React?
+• Explain the purpose of state in React components.
+• How to pass data from Parent to Child component and vice-versa?
+• Explain the virtual Dom concept.
+
+React Components:
+• Differentiate between functional and class components in React.
+• Describe the lifecycle methods in a React class component.
+• How can we achieve lifecycle methods in functional component.
+• Difference between controlled and uncontrolled components.
+• What are pure components?
+
+React Hooks:
+• Explain the use of the useState hook in React.
+• What is the useEffect hook, and why is it used?
+• What is the difference between useCallback and useMemo hook?
+• Explain useContext hook.
+
+Redux:
+• What problem does Redux solve in a React application?
+• Explain the roles of actions, reducers, and the store in Redux.
+• Explain useReduce
+
+ 1. Explain the differences between == and ===.
+ 2. What is event delegation, and how does it function in JavaScript?
+ 3. Can you provide an illustration of how ES6 has altered the approach to working with "this" in JavaScript?
+ 4. Explain the concept of prototypal inheritance.
+ 5. Differentiate between a variable that is null, undefined, or undeclared.
+ 6. Define what a closure is and describe its uses and advantages.
+ 7. Explain the primary distinction between the Array.forEach() loop and Array.map() method, as well as when to choose one over the other.
+ 8. What is a common scenario for employing anonymous functions?
+ 9. Distinguish between host objects and native objects.
+ 10. Clarify the distinctions among 'function User(){}', 'var user = User()', and 'var user = new User()'
+ 11. Can you elucidate the purposes of Function.call and Function.apply, along with their notable differences?
+ 12. Describe the Function.prototype.bind method.
+ 13. Explain the differences between feature detection, feature inference, and utilizing the User Agent (UA) string.
+ 14. Define the concept of "hoisting."
+ 15. What is type coercion, and what are some common pitfalls associated with relying on it in JavaScript code?
+ 16. Describe event bubbling and event capturing.
+ 17. What distinguishes an "attribute" from a "property"?
+ 18. List the advantages and disadvantages of extending built-in JavaScript objects.
+ 19. Discuss the same-origin policy's implications for JavaScript.
+ 20. Why is it referred to as a "Ternary operator," and what does the term "Ternary" signify?
+ 21. Define strict mode and outline some of its advantages and disadvantages.
+ 22. Analyze the pros and cons of writing JavaScript code in a language that compiles to JavaScript.
+ 23. What tools and techniques do you employ for debugging JavaScript code?
+ 24. Enumerate the benefits and drawbacks of immutability and explain how you can achieve it in your code.
+ 25. Differentiate between synchronous and asynchronous functions and elucidate the event loop.
+ 26. Explain the disparities between variables created using let, var, or const.
+ 27. Compare ES6 classes and ES5 function constructors, and furnish a use case for the arrow (=>) function syntax.
+ 28. Describe the advantages of using the arrow syntax for methods in constructors.
+ 29. Define a higher-order function and provide an example of object or array destructuring.
+ 30. Give an example of generating a string using ES6 Template Literals and explain their benefits.
+
+ 👉 Understanding CORS (Cross-Origin Resource Sharing)
+
+Cross-Origin Resource Sharing (CORS) is a crucial security feature implemented by web browsers to manage how web applications interact with resources across different domains. Here’s a detailed look into how CORS works:
+
+👉 What is CORS?
+
+CORS is a mechanism that allows servers to specify which domains are permitted to access their resources. By including specific HTTP headers in their responses, servers can control and restrict access to their data.
+
+👉 Same-Origin Policy
+
+Before CORS, web browsers enforced the Same-Origin Policy, which restricted web pages from making requests to domains different from their own. This policy was designed to protect sensitive data and prevent unauthorized actions on behalf of users.
+
+👉 Cross-Origin Requests
+
+A cross-origin request occurs when a web page hosted on one domain requests resources from another domain. These requests can be made using technologies like XMLHttpRequest (XHR) or the Fetch API.
+
+👉 How CORS Works
+
+1. Preflight Request: When a web application initiates a cross-origin request, the browser first sends a preflight request (HTTP OPTIONS) to the server. This preflight request checks if the server allows the actual request based on its CORS policy.
+
+2. Server Response: The server responds with CORS-specific headers to indicate whether the request is permitted. These headers define which origins are allowed, which HTTP methods are supported, and other relevant information.
+
+3. Actual Request: If the preflight request is successful and the server permits the actual request, the browser proceeds with sending the actual request (such as GET or POST).
+
+👉 Key CORS Headers
+
+1. Access-Control-Allow-Origin: Specifies which domains are allowed to access the resource. It can be set to a specific domain, "*", or null.
+ 
+2. Access-Control-Allow-Methods: Lists the HTTP methods (like GET, POST) that are permitted for cross-origin requests.
+ 
+3. Access-Control-Allow-Headers: Enumerates the HTTP headers that can be used in the actual request.
+ 
+4. Access-Control-Allow-Credentials: Indicates whether credentials (like cookies) can be included in cross-origin requests.
+
+👉 Handling CORS Errors
+
+If a cross-origin request is made without the proper CORS headers or if it is not allowed by the server’s CORS policy, the browser blocks the request and generates a CORS error. To address these errors, developers can configure their servers to include the appropriate CORS headers or use a proxy to handle cross-origin requests.
+
+👉 Security Implications
+
+CORS enhances web security by allowing servers to control access to their resources. Properly configured CORS policies help prevent unauthorized data access and mitigate risks such as Cross-Site Scripting (XSS) and Cross-Site Request Forgery (CSRF) attacks
+
+✅ Basic JavaScript Concepts
+1. Explain JavaScript’s Event Loop: How does the event loop work in JavaScript, and what is the role of the call stack and task queue?
+2. What is Hoisting?: Explain how variable and function declarations are hoisted in JavaScript.
+3. Difference Between `==` and `===`: What is the difference between loose equality (`==`) and strict equality (`===`)?
+4. Explain `this` Keyword: How does the value of `this` get determined in different contexts (e.g., global, object methods, constructors)?
+5. What are Closures?: Explain closures and provide an example of their use.
+
+ ✅ Functions and Scope
+1. Function Currying: What is function currying and how is it implemented in JavaScript?
+2. What is a Callback Function?: Explain the concept of callbacks and provide examples of their use.
+3. Explain `bind`, `call`, and `apply`: How do these methods work and how are they different?
+4. What is a Self-Invoking Function?: Describe what self-invoking (immediately-invoked function expressions, or IIFE) functions are and their use cases.
+5.Difference Between `var`, `let`, and `const`: Explain the differences in scope, hoisting, and mutability.
+ 
+✅ Arrays and Strings
+1. Array Methods: Explain the differences between `map()`, `filter()`, and `reduce()` methods.
+2. Find Duplicates in an Array: Write a function to find duplicates in an array.
+3. String Manipulation: How can you check if a string is a palindrome?
+4. Flatten an Array: Write a function to flatten a nested array.
+5. Remove All Falsy Values from Array: How would you remove falsy values from an array?
+ 
+✅ Asynchronous JavaScript
+1. Promises: What is a promise and how does it work? Explain `then()`, `catch()`, and `finally()`.
+2. Async/Await: How does `async` and `await` simplify asynchronous code? Provide an example.
+3. Error Handling in Promises: How do you handle errors in promises and async/await?
+4. Event Delegation: What is event delegation and how does it work in JavaScript?
+5. Difference Between `setTimeout` and `setInterval`: Explain how `setTimeout()` and `setInterval()` work and their differences.
+
+✅ Algorithms and Data Structures
+1. Reverse a String: Write a function to reverse a string.
+2. Find the Largest/Smallest Element in an Array: How would you find the largest or smallest number in an array?
+3. Two Sum Problem: Given an array of integers and a target sum, find two numbers that add up to the target.
+ 
+✅ Advanced Topics
+1. Memoization: What is memoization and how can it improve performance? Provide an example.
+2. Debouncing and Throttling: Explain the concepts of debouncing and throttling and provide examples of when to use each.
+3. JavaScript Design Patterns: Describe common JavaScript design patterns such as Singleton, Factory, and Observer
+
+👉 𝐁𝐚𝐬𝐢𝐜𝐬 𝐨𝐟 𝐉𝐚𝐯𝐚𝐒𝐜𝐫𝐢𝐩𝐭
+- Variables (let, const, var)
+- Data Types (String, Number, Boolean, Object, Array)
+- Operators (Arithmetic, Comparison, Logical)
+
+👉 𝐂𝐨𝐧𝐭𝐫𝐨𝐥 𝐒𝐭𝐫𝐮𝐜𝐭𝐮𝐫𝐞𝐬
+- Conditional Statements (if-else, switch)
+- Loops (for, while, do-while)
+- Break and Continue
+
+👉 𝐅𝐮𝐧𝐜𝐭𝐢𝐨𝐧𝐬
+- Function Declaration and Expression
+- Arrow Functions
+- Callback Functions
+- Higher-Order Functions
+
+👉 𝐎𝐛𝐣𝐞𝐜𝐭𝐬 𝐚𝐧𝐝 𝐀𝐫𝐫𝐚𝐲𝐬
+- Object Creation and Manipulation
+- Array Methods (map, filter, reduce)
+
+👉 𝐀𝐬𝐲𝐧𝐜𝐡𝐫𝐨𝐧𝐨𝐮𝐬 𝐉𝐚𝐯𝐚𝐒𝐜𝐫𝐢𝐩𝐭
+- Promises
+- Async/Await
+- Callback Hell and How to Avoid It
+
+👉 𝐃𝐎𝐌 𝐌𝐚𝐧𝐢𝐩𝐮𝐥𝐚𝐭𝐢𝐨𝐧
+- Selecting Elements (getElementById, querySelector)
+- Changing Content and Styles
+- Event Listeners (click, input, submit)
+
+👉 𝐄𝐒𝟔
+- Destructuring
+- Spread and Rest Operators
+- Template Literals
+- Default Parameters
+- Modules (import/export)
+
+👉 𝐃𝐚𝐭𝐚 𝐒𝐭𝐫𝐮𝐜𝐭𝐮𝐫𝐞𝐬
+- Arrays and Objects
+- Sets and Maps
+- WeakSets and WeakMaps
+
+👉 𝐀𝐝𝐯𝐚𝐧𝐜𝐞𝐝 𝐂𝐨𝐧𝐜𝐞𝐩𝐭𝐬
+- Closures
+- Hoisting
+- Prototypes and Inheritance
+- The 'this' keyword
+- Scope (Global, Local, Block)
+ 
+👉 𝐉𝐚𝐯𝐚𝐒𝐜𝐫𝐢𝐩𝐭 𝐢𝐧 𝐭𝐡𝐞 𝐁𝐫𝐨𝐰𝐬𝐞𝐫
+- Event Loop
+- Browser APIs (LocalStorage, Fetch API)
+- Web Components
+
+👉 𝐅𝐫𝐚𝐦𝐞𝐰𝐨𝐫𝐤𝐬
+- Overview of Popular Frameworks (React, Angular, Vue)
+
+👉 𝐓𝐨𝐨𝐥𝐢𝐧𝐠 𝐚𝐧𝐝 𝐁𝐮𝐢𝐥𝐝 𝐒𝐲𝐬𝐭𝐞𝐦𝐬
+- npm and Yarn
+- Webpack and Babel
+- ESLint and Prettier for Code Quality
+
+👉 𝐓𝐞𝐬𝐭𝐢𝐧𝐠 𝐢𝐧 𝐉𝐚𝐯𝐚𝐒𝐜𝐫𝐢𝐩𝐭
+- Unit Testing with Jest
+- Integration Testing
+- End-to-End Testing with Cypress
+
+👉 𝐏𝐞𝐫𝐟𝐨𝐫𝐦𝐚𝐧𝐜𝐞 𝐎𝐩𝐭𝐢𝐦𝐢𝐳𝐚𝐭𝐢𝐨𝐧
+- Understanding the Call Stack
+- Debouncing and Throttling
+- Memory Management and Garbage Collection
+
+👉 𝐃𝐞𝐩𝐥𝐨𝐲𝐦𝐞𝐧𝐭
+- CI/CD Basics
+- Hosting JavaScript Apps (Netlify, Vercel)
+- Minification and Bundling for Production
+
+👉 𝐒𝐞𝐜𝐮𝐫𝐢𝐭𝐲 𝐢𝐧 𝐉𝐚𝐯𝐚𝐒𝐜𝐫𝐢𝐩𝐭
+- XSS and CSRF Prevention
+- Content Security Policy (CSP)
+- Sanitizing Inputs
+
+👉 𝐁𝐮𝐢𝐥𝐝 𝐚𝐧𝐝 𝐃𝐞𝐩𝐥𝐨𝐲𝐦𝐞𝐧𝐭
+- Using Parcel or Webpack for Bundling
+- Continuous Integration/Continuous Deployment (CI/CD)
+- Deploying on Platforms like Heroku, Netlify, Vercel
+
+👉 𝐋𝐢𝐛𝐫𝐚𝐫𝐢𝐞𝐬 𝐚𝐧𝐝 𝐓𝐨𝐨𝐥𝐬
+- jQuery (for legacy projects)
+- Lodash for Utility Functions
+- Moment.js for Date Handling
+
+1. What is JavaScript?
+2. What are the data types supported by JavaScript?
+3. What is the difference between `let`, `const`, and `var`?
+4. Explain how `==` and `===` differ.
+5. What is a closure?
+6. What is hoisting?
+7. Explain the concept of "this" in JavaScript.
+8. What are JavaScript prototypes?
+9. What is the difference between `null` and `undefined`?
+10. How does JavaScript handle asynchronous operations?
+11. What is a promise?
+12. What are async/await functions?
+13. Explain event delegation in JavaScript.
+14. What are JavaScript modules?
+15. How can you prevent a function from being called multiple times?
+16. What is the event loop?
+17. What is the difference between `apply()` and `call()` methods?
+18. What is `bind()` method used for?
+19. What is a JavaScript event loop?
+20. Explain the concept of "event bubbling" and "event capturing".
+21. What is the difference between `deep copy` and `shallow copy`?
+22. What are generator functions?
+23. What is the `new` keyword used for?
+24. How do JavaScript’s `setTimeout` and `setInterval` work?
+25. What is a `WeakMap` and how is it different from a `Map`?
+26. What is a `Set` in JavaScript?
+27. What is `Object.create()` used for?
+28. How does JavaScript’s garbage collection work?
+29. What are "decorators" in JavaScript?
+30. Explain the difference between `prototype` and `__proto__`.
+31. What is the purpose of `Object.assign()`?
+32. What are "template literals"?
+33. What is the `spread` operator?
+34. What is the `rest` parameter?
+35. Explain the `for...of` loop.
+36. What are `async` and `await` keywords used for?
+37. What is `Symbol` used for in JavaScript?
+38. How do you create a class in JavaScript?
+39. What is destructuring in JavaScript?
+40. What is the `Proxy` object?

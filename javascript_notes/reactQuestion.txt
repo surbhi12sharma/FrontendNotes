@@ -1,0 +1,25 @@
+1. What is React?
+2. What are components in React?
+3. What is JSX?
+4. What is the virtual DOM?
+5. What are props?
+6. What is state in React?
+7. How do you handle events in React?
+8. What are hooks in React?
+9. What is the purpose of `useEffect`?
+10. What is context in React?
+11. How do you manage state in large applications?
+12. What are higher-order components (HOCs)?
+13. What are render props?
+14. What is code splitting?
+15. How can you optimize performance in a React app?
+16. What are some common performance issues in React?
+17. How do you handle forms in React?
+18. What is the difference between controlled and uncontrolled components?
+19. How do you test React components?
+20. What are some common debugging techniques in React?
+21. What are error boundaries?
+22. How do you implement routing in a React app?
+23. What is the significance of keys in lists?
+24. How do you perform API calls in React?
+25. What are some lifecycle methods in React?

@@ -1,0 +1,5 @@
+Javascript-> is just a programming language of web applications
+To use js we have 2 ways
+1. Internal Linking:- Write the js code inside the html file.
+2. External Linking:- Write the js code in seperate .js file.
+Js code run in top to bottom faction

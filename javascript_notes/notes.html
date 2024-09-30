@@ -16,7 +16,7 @@
         h2,
         h3,
         h4 {
-            color: #333;
+            color: #5f4040;
         }
 
         pre {
@@ -44,134 +44,447 @@
 
     <h1>JavaScript Notes</h1>
 
-    <h2>1. Variables and Data Types</h2>
+    <h2>Introduction to JavaScript</h2>
+    <p>JavaScript is a programming language used primarily in web applications.</p>
+    <p>There are two ways to use JavaScript:</p>
+    <ul>
+        <li><strong>Internal Linking:</strong> Write the JavaScript code inside the HTML file.</li>
+        <li><strong>External Linking:</strong> Write the JavaScript code in a separate <code>.js</code> file.</li>
+    </ul>
+    <p>JavaScript code runs in a top-to-bottom fashion.</p>
 
-    <h3>Definition:</h3>
-    <p>JavaScript is dynamically typed. Variables can be declared using <code>var</code>, <code>let</code>, or
-        <code>const</code>. Common data types include <code>Number</code>, <code>String</code>, <code>Boolean</code>,
-        <code>Object</code>, <code>Array</code>, <code>undefined</code>, <code>null</code>.</p>
+    <h2>1. Variables</h2>
+    <p><strong>let</strong>: Block-scoped, can be updated but not re-declared within the same scope.</p>
+    <p><strong>const</strong>: Block-scoped, cannot be updated or re-declared. Must be initialized during declaration.
+    </p>
+    <p><strong>var</strong>: Function-scoped or globally scoped if declared outside a function, can be updated and
+        re-declared.</p>
+    <pre><code>let x = 10;
+const y = 20;
+var z = 30;</code></pre>
 
-    <h3>Code Snippet:</h3>
-    <pre>
-// Variable declarations
-var age = 30;
-let salary = 5000.50;
-const name = "John Doe";
+    <h2>2. Data Types</h2>
+    <h3>1. Primitive Data Types</h3>
 
-// Data types
-let isEmployed = true;  // Boolean
-let hobbies = ["Reading", "Traveling"];  // Array
-let person = { name: "Alice", age: 25 };  // Object
-let unknown = undefined;  // Undefined
-let nothing = null;  // Null
-    </pre>
+    <p><strong>Number</strong>: Represents both integer and floating-point numbers.</p>
+    <pre><code>let age = 25;
+let price = 99.99;
+    </code></pre>
 
-    <h2>2. Functions</h2>
+    <p><strong>String</strong>: Represents textual data.</p>
+    <pre><code>let name = "John";
+    </code></pre>
 
-    <h3>Definition:</h3>
-    <p>Functions can be declared using the <code>function</code> keyword, as function expressions, or as arrow
-        functions.</p>
+    <p><strong>Boolean</strong>: Represents logical values <code>true</code> or <code>false</code>.</p>
+    <pre><code>let isActive = true;
+    </code></pre>
 
-    <h3>Code Snippet:</h3>
-    <pre>
-// Function declaration
-function greet(name) {
-    return "Hello, " + name;
+    <p><strong>Undefined</strong>: A variable that has been declared but not assigned a value.</p>
+    <pre><code>let x; // x is undefined
+    </code></pre>
+
+    <p><strong>Null</strong>: Represents an intentional absence of a value.</p>
+    <pre><code>let y = null;
+    </code></pre>
+
+    <p><strong>Symbol</strong>(ES6): Represents a unique and immutable value.</p>
+    <pre><code>let symbol1 = Symbol('description');
+    </code></pre>
+
+    <h3>2. Non-Primitive (Reference) Data Types</h3>
+
+    <p><strong>Object</strong>: A collection of key-value pairs.</p>
+    <pre><code>let user = { name: "John", age: 30 };
+    </code></pre>
+
+    <p><strong>Array</strong>: A list-like structure holding multiple values.</p>
+    <pre><code>let numbers = [1, 2, 3, 4];
+    </code></pre>
+
+    <p><strong>Function</strong>: A block of reusable code.</p>
+    <pre><code>function greet() { return "Hello!"; }
+    </code></pre>
+
+    <p><strong>Date</strong>: Represents date and time.</p>
+    <pre><code>let today = new Date();
+    </code></pre>
+
+    <h3>Special Data Types</h3>
+
+    <p><strong>BigInt</strong>(ES6): Used for very large integers.</p>
+    <pre><code>let bigNumber = 123456789012345678901234567890n;
+    </code></pre>
+    <p>string + string = string</p>
+    <p>string + number = number</p>
+    <p>string * number = number</p>
+
+    <h2>3. JavaScript Naming Conventions</h2>
+
+    <p><strong>Variables and Functions</strong>: Use <code>camelCase</code> for variables and functions (e.g.,
+        <code>userName</code>).
+    </p>
+
+    <p><strong>Classes</strong>: Use <code>PascalCase</code> for classes (e.g., <code>UserAccount</code>).</p>
+
+    <p><strong>Constants</strong>: Use <code>UPPER_CASE</code> with underscores for constants (e.g.,
+        <code>MAX_LIMIT</code>).
+    </p>
+
+    <p><strong>Booleans</strong>: Typically start with <code>is</code> or <code>has</code> (e.g., <code>isActive</code>,
+        <code>hasPermission</code>).
+    </p>
+
+    <p><strong>Private Variables</strong>: May start with an underscore (<code>_</code>) or use <code>#</code> in ES6
+        classes (e.g., <code>_internalId</code>, <code>#password</code>).</p>
+
+    <div class="example">
+        <p><strong>Example:</strong></p>
+        <pre><code>
+// Variable
+let userName = "John";
+
+// Function
+function getUserData() { ... }
+
+// Class
+class UserAccount { ... }
+
+// Constant
+const MAX_LIMIT = 100;
+
+// Boolean
+let isActive = true;
+
+// Private Variable
+class User {
+  #password;
+  _internalId;
+}
+        </code></pre>
+    </div>
+    <h2>4. Spread and Rest Operators (ES6)</h2>
+
+    <h3>1. Spread Operator</h3>
+    <p>The spread operator (<code>...</code>) is used to expand an array or object into individual elements.</p>
+    <pre><code>let arr = [1, 2, 3];
+console.log(...arr); // Output: 1 2 3
+    </code></pre>
+
+    <h3>2. Rest Operator</h3>
+    <p>The rest operator (<code>...</code>) is used to gather multiple arguments into a single array.</p>
+    <pre><code>function sum(...numbers) {
+  return numbers.reduce((acc, num) => acc + num, 0);
+}
+console.log(sum(1, 2, 3)); // Output: 6
+    </code></pre>
+    <h2>5. Functions</h2>
+    <p><strong>Function Declaration</strong>: Hoisted, can be called before its declaration.</p>
+    <p><strong>Function Expression</strong>: Not hoisted, defined as an expression.</p>
+    <p><strong>Arrow Functions</strong>: Shorter syntax, does not bind its own <code>this</code>.</p>
+    <pre><code>function greet() {
+    return "Hello!";
 }
 
-// Function expression
-const greet = function(name) {
-    return "Hello, " + name;
+const greet = function() {
+    return "Hello!";
 };
 
-// Arrow function
-const greet = (name) => "Hello, " + name;
+const greet = () => "Hello!";</code></pre>
+    <h2>6. Regular Function vs Arrow Function in JavaScript</h2>
 
-console.log(greet("Alice"));  // Output: Hello, Alice
-    </pre>
-
-    <h2>3. Objects and Prototypes</h2>
-
-    <h3>Definition:</h3>
-    <p>Objects in JavaScript are key-value pairs. Prototypal inheritance allows objects to inherit properties and
-        methods from other objects.</p>
-
-    <h3>Code Snippet:</h3>
+    <h3>1. Syntax</h3>
+    <p><b>Regular Function:</b></p>
     <pre>
-// Creating an object
-let person = {
-    name: "Alice",
-    age: 25,
-    greet: function() {
-        console.log("Hello, " + this.name);
+function add(a, b) {
+return a + b;
+}
+</pre>
+
+    <p><b>Arrow Function:</b></p>
+    <pre>
+const add = (a, b) => a + b;
+</pre>
+
+    <h3>2. `this` Keyword</h3>
+    <p><b>Regular Function:</b> "this" refers to the object that calls the function.</p>
+    <button onclick="regularFunctionThis()">Click to see result in console</button>
+
+    <p><b>Arrow Function:</b> "this" is lexically scoped and inherits from the surrounding context.</p>
+    <button onclick="arrowFunctionThis()">Click to see result in console</button>
+
+    <h3>3. `arguments` Object</h3>
+    <p><b>Regular Function:</b> Has access to the <code>arguments</code> object.</p>
+    <button onclick="regularFunctionArguments()">Click to see result in console</button>
+
+    <p><b>Arrow Function:</b> Does not have access to <code>arguments</code>, use rest parameters.</p>
+    <button onclick="arrowFunctionArguments()">Click to see result in console</button>
+
+    <h3>4. Constructor Function</h3>
+    <p><b>Regular Function:</b> Can be used as a constructor with <code>new</code>.</p>
+    <button onclick="regularFunctionConstructor()">Click to see result in console</button>
+
+    <p><b>Arrow Function:</b> Cannot be used as a constructor.</p>
+    <button onclick="arrowFunctionConstructor()">Click to see result in console (will throw error)</button>
+
+    <h3>5. Implicit Return</h3>
+    <p><b>Regular Function:</b> Requires an explicit <code>return</code>.</p>
+    <pre>
+function add(a, b) {
+return a + b;
+}
+</pre>
+
+    <p><b>Arrow Function:</b> Can have an implicit return for single-line expressions.</p>
+    <pre>
+const add = (a, b) => a + b;
+</pre>
+    <p><strong>Note:</strong> Arrow functions do not have their own <code>this</code> value. It is useful when working
+
+    <h2>7. High Order Function</h2>
+    <p>In JavaScript, a Higher-Order Function is a function that does one or both of the following:</p>
+    <p>1. <b>Takes one or more functions as arguments.</b></p>
+    <p>2. <b>Returns a function as its result. </b></p>
+    <p> Functions like map(), filter(), and reduce() are higher-order functions because they take other functions as
+        arguments</p>
+    <h2>8. Callbacks</h2>
+    <p>In JavaScript, a callback function is a function that is passed as an argument to another function and is
+        executed after some operation has been completed. Callbacks are often used to handle asynchronous operations
+        like API calls, event handling, and timers.</p>
+    <p>Callbacks allow you to ensure that certain code runs only after other code has completed, especially when dealing
+        with asynchronous operations.</p>
+    <p>Callbacks are a key concept in JavaScript, particularly in asynchronous programming, as they allow you to control
+        the flow of your code and handle operations that take time, such as reading files, making HTTP requests, or
+        waiting for user input.</p>
+    <h2>9. Promises in JavaScript</h2>
+
+    <p>A <strong>Promise</strong> is an object that represents the eventual completion or failure of an asynchronous
+        operation and its resulting value. Promises provide a more robust way to handle asynchronous operations compared
+        to callbacks, allowing you to chain operations and handle errors more gracefully.</p>
+
+    <h3>Key States of a Promise:</h3>
+    <ul>
+        <li><strong>Pending</strong>: The initial state; neither fulfilled nor rejected.</li>
+        <li><strong>Fulfilled</strong>: The operation completed successfully, and the promise has a result.</li>
+        <li><strong>Rejected</strong>: The operation failed, and the promise has a reason for the failure.</li>
+    </ul>
+
+    <h3>Creating and Using Promises</h3>
+
+    <h4>Creating a Promise:</h4>
+    <pre><code>
+const myPromise = new Promise((resolve, reject) => {
+    // Asynchronous operation
+    setTimeout(() => {
+        const success = true; // or false based on some condition
+        if (success) {
+            resolve("Operation successful!");
+        } else {
+            reject("Operation failed.");
+        }
+    }, 1000);
+});
+    </code></pre>
+
+    <h4>Consuming a Promise:</h4>
+    <pre><code>
+myPromise
+    .then(result => {
+        console.log(result); // Output: Operation successful!
+    })
+    .catch(error => {
+        console.error(error); // Output: Operation failed.
+    });
+    </code></pre>
+
+    <h4>Chaining Promises:</h4>
+    <pre><code>
+myPromise
+    .then(result => {
+        console.log(result);
+        return "Next step";
+    })
+    .then(nextResult => {
+        console.log(nextResult); // Output: Next step
+    })
+    .catch(error => {
+        console.error(error);
+    });
+    </code></pre>
+
+    <h4>Using <code>async</code>/<code>await</code>:</h4>
+    <pre><code>
+async function asyncOperation() {
+    try {
+        const result = await myPromise;
+        console.log(result); // Output: Operation successful!
+    } catch (error) {
+        console.error(error); // Output: Operation failed.
     }
-};
+}
 
-// Accessing object properties
-console.log(person.name);  // Output: Alice
-person.greet();  // Output: Hello, Alice
+asyncOperation();
+    </code></pre>
+    <h2>10. Closures in JavaScript</h2>
 
-// Prototypal inheritance
-let student = Object.create(person);
-student.grade = "A";
-console.log(student.name);  // Output: Alice (inherited from person)
-console.log(student.grade);  // Output: A
-    </pre>
+    <p>A <strong>closure</strong> is a feature in JavaScript where an inner function gets access to the variables of its
+        outer function even after the outer function has finished executing. Closures are useful for creating private
+        variables and maintaining state.</p>
 
-    <h2>4. Asynchronous JavaScript</h2>
+    <h3>Example of a Closure:</h3>
+    <pre><code>
+function makeCounter() {
+    let count = 0; // `count` is a private variable
+    return function() {
+        count += 1; // Accesses the `count` variable from the outer scope
+        return count;
+    };
+}
+
+const counter = makeCounter();
+
+console.log(counter()); // Output: 1
+console.log(counter()); // Output: 2
+console.log(counter()); // Output: 3
+    </code></pre>
+
+    <p>In this example, <code>makeCounter</code> creates a closure by returning an inner function. The inner function
+        retains access to the <code>count</code> variable, allowing it to maintain state between calls.</p>
+
+    <h2>3. Promises and Async/Await</h2>
 
     <h3>Definition:</h3>
-    <p>JavaScript handles asynchronous operations using callbacks, promises, and <code>async/await</code>.</p>
+    <p>Promises are used to handle asynchronous operations.</p>
+    <p><code>async/await</code> is syntactic sugar built on top of Promises to write asynchronous code more comfortably.
+    </p>
 
     <h3>Code Snippet:</h3>
     <pre>
 // Using Promises
-function fetchData(url) {
+const fetchData = () => {
     return new Promise((resolve, reject) => {
-        fetch(url)
-            .then(response => response.json())
-            .then(data => resolve(data))
-            .catch(error => reject(error));
+        setTimeout(() => {
+            resolve("Data fetched");
+        }, 2000);
     });
-}
+};
+
+fetchData().then(response => console.log(response));
 
 // Using async/await
-async function getData(url) {
+const fetchDataAsync = async () => {
     try {
-        const data = await fetchData(url);
-        console.log(data);
+        const response = await fetchData();
+        console.log(response);
     } catch (error) {
-        console.error("Error:", error);
+        console.log(error);
     }
-}
+};
 
-getData("https://api.example.com/data");
+fetchDataAsync();
     </pre>
 
-    <h2>5. DOM Manipulation</h2>
+    <h2>4. DOM Manipulation</h2>
 
     <h3>Definition:</h3>
-    <p>The Document Object Model (DOM) represents the structure of a webpage. JavaScript can interact with the DOM to
-        change content, styles, and handle events.</p>
+    <p>The Document Object Model (DOM) is a programming interface for HTML and XML documents. JavaScript can manipulate
+        the DOM to change the structure, style, and content of a web page.</p>
 
     <h3>Code Snippet:</h3>
     <pre>
-// Selecting an element
-const title = document.getElementById("title");
+// Selecting elements
+const element = document.getElementById('myElement');
+const elements = document.querySelectorAll('.myClass');
 
-// Changing content
-title.textContent = "Welcome to JavaScript!";
+// Modifying content
+element.textContent = 'New Content';
+element.style.color = 'blue';
 
 // Adding an event listener
-title.addEventListener("click", () => {
-    alert("Title clicked!");
+element.addEventListener('click', () => {
+    alert('Element clicked!');
 });
-
-// Creating and appending an element
-const newElement = document.createElement("p");
-newElement.textContent = "This is a new paragraph.";
-document.body.appendChild(newElement);
     </pre>
+
+    <h2>5. Common Array Methods</h2>
+
+    <h3>Definition:</h3>
+    <p>JavaScript arrays come with several built-in methods for manipulating data.</p>
+
+    <h3>Code Snippet:</h3>
+    <pre>
+// Array map - transform each element
+const numbers = [1, 2, 3, 4];
+const doubled = numbers.map(num => num * 2); // [2, 4, 6, 8]
+
+// Array filter - filter elements based on condition
+const evenNumbers = numbers.filter(num => num % 2 === 0); // [2, 4]
+
+// Array reduce - reduce array to a single value
+const sum = numbers.reduce((total, num) => total + num, 0); // 10
+    </pre>
+    <script>(function () {
+            console.log('surbhi')
+        })()</script>
+    <script>
+        // Example for `this` in Regular Function
+        const obj1 = {
+            name: 'Alice',
+            regularFunction: function () {
+                console.log(this.name); // `this` refers to the object (obj1)
+            }
+        };
+        function regularFunctionThis() {
+            obj1.regularFunction(); // Output: 'Alice'
+        }
+
+        // Example for `this` in Arrow Function
+        const obj2 = {
+            name: 'Bob',
+            arrowFunction: () => {
+                console.log(this.name); // `this` refers to the global context (undefined)
+            }
+        };
+        function arrowFunctionThis() {
+            obj2.arrowFunction(); // Output: undefined
+        }
+
+        // Example for `arguments` in Regular Function
+        function regularFunctionArguments() {
+            function sum() {
+                console.log(arguments); // arguments contains all passed values
+            }
+            sum(1, 2, 3); // Output: [1, 2, 3]
+        }
+
+        // Example for `arguments` in Arrow Function
+        function arrowFunctionArguments() {
+            const sum = (...args) => {
+                console.log(args); // Rest parameter captures all values
+            };
+            sum(1, 2, 3); // Output: [1, 2, 3]
+        }
+
+        // Example for Constructor in Regular Function
+        function Person(name) {
+            this.name = name;
+        }
+        function regularFunctionConstructor() {
+            const person = new Person('Charlie');
+            console.log(person.name); // Output: Charlie
+        }
+
+        // Arrow Function as Constructor (This will throw an error)
+        const PersonArrow = (name) => {
+            this.name = name;
+        };
+        function arrowFunctionConstructor() {
+            try {
+                const person = new PersonArrow('Dave');
+            } catch (error) {
+                console.error('Error:', error.message); // Output: Error: PersonArrow is not a constructor
+            }
+        }
+    </script>
 
 </body>
 
